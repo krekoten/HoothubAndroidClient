@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@+id/home"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" android:orientation="vertical">
+	    
+	    <!-- <include layout="@layout/actionbar"/> -->
+    <ImageView android:id="@+id/imageView1" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/logo" android:layout_marginTop="70dp"></ImageView>
+	    
+    	<com.google.android.apps.iosched.ui.widget.DashboardLayout android:id="@+id/dashboardLayout1" android:layout_width="match_parent" android:layout_height="match_parent">
+    	    <Button style="@style/DashboardButton" android:text="@string/showActivityListAction" android:id="@+id/showActivityList" android:drawableTop="@drawable/home_activity"></Button>
+    	    <Button style="@style/DashboardButton" android:id="@+id/showMessageThreadList" android:text="@string/showMessageThreadListAction" android:drawableTop="@drawable/home_messages"></Button>
+    	    <Button style="@style/DashboardButton" android:id="@+id/showFriendList" android:text="@string/showFriendListAction" android:drawableTop="@drawable/home_friends"></Button>
+    	    <Button style="@style/DashboardButton" android:drawableTop="@drawable/home_friends" android:text="@string/showFriendRequestAction" android:id="@+id/showFriendInviteList"></Button>
+    	</com.google.android.apps.iosched.ui.widget.DashboardLayout>
+</LinearLayout>

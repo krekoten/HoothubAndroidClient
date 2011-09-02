@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+    <ListView
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" android:id="@+id/messageThreadListView" android:layout_weight="1">
+        
+    </ListView>
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_width="match_parent" android:orientation="vertical" android:layout_height="143dp">
+        <EditText android:layout_height="98dp" android:layout_width="match_parent" android:inputType="textMultiLine" android:id="@+id/bodyTextView"></EditText>
+        <Button android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/postMessage" android:id="@+id/postButton"></Button>
+    </LinearLayout>
+</LinearLayout>

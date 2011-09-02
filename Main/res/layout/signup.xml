@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <ImageView android:id="@+id/imageView1" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/logo" android:layout_marginTop="40dp" android:layout_marginBottom="30dp"></ImageView>
+    <TextView android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:id="@+id/textView1" android:text="@string/loginLabel"></TextView>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/loginField">
+        <requestFocus></requestFocus>
+    </EditText>
+    <TextView android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:id="@+id/textView2" android:text="@string/emailLabel"></TextView>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress" android:id="@+id/emailField"></EditText>
+    <TextView android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:id="@+id/textView3" android:text="@string/fullNameLabel"></TextView>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPersonName" android:id="@+id/fullNameField"></EditText>
+    <TextView android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:id="@+id/textView4" android:text="@string/passwordLabel"></TextView>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" android:id="@+id/passwordField"></EditText>
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/createAccountAction" android:id="@+id/signUpButton"></Button>
+    
+</LinearLayout>

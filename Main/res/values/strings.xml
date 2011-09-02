@@ -2,4 +2,34 @@
 <resources>
     <string name="hello">Hello World!</string>
     <string name="app_name">Hoothub</string>
+    <string name="signInAcivityTitle">Sign In</string>
+    <string name="loginOrEmailLabel">Login or E-Mail</string>
+    <string name="passwordLabel">Password</string>
+    <string name="signInAction">Sign In</string>
+    <string name="createAccountAction">Sign Up</string>
+    <string name="wrongSingInCredentials">You have entered wrong login or/and password</string>
+    <string name="loginLabel">Login</string>
+    <string name="emailLabel">E-Mail</string>
+    <string name="fullNameLabel">Full Name</string>
+    <string name="fillInAllFieldsNotice">Please fill in all fields</string>
+    <string name="showActivityListAction">Activity</string>
+    <string name="showMessageThreadListAction">Messages</string>
+    <string name="showFriendListAction">Friends</string>
+    <string name="showProfileAction">Profile</string>
+    <string name="networkProblemNotice">There are some problems with network. Check your connection.</string>
+    <string name="signOutAction">Sign out</string>
+    <string name="quitAction">Quit</string>
+    <string name="newActivityAction">New Activity</string>
+    <string name="refreshActivityAction">Refresh</string>
+    <string name="postActivityAction">Post</string>
+    <string name="activityPosted">Activity posted</string>
+    <string name="errorPostingActivity">Error occured. Try again later.</string>
+    <string name="showFriendRequestAction">Friend Requests</string>
+    <string name="acceptAction">Accept</string>
+    <string name="denyAction">Deny</string>
+    <string name="postMessage">Post</string>
+    <string name="messagePosted">Message posted</string>
+    <string name="errorPostingMessage">Error occured. Try again later.</string>
+    <string name="requestAccepted">Successfuly accepted request</string>
+    <string name="requestDenied">Request deny sent</string>
 </resources>

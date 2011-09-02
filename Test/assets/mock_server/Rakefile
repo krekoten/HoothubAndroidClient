@@ -1,0 +1,6 @@
+desc "Start mock server on port 4567"
+task :server do
+  `ruby -rubygems server.rb`
+end
+
+task :default => :server
