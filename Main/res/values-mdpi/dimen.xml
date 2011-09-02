@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="avatarSize">64px</dimen>
+    <dimen name="avatarMaxSize">100px</dimen>
     
 </resources>

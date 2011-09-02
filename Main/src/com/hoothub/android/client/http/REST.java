@@ -17,6 +17,7 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.conn.ClientConnectionManager;
@@ -26,6 +27,7 @@ import org.apache.http.conn.scheme.SchemeRegistry;
 import org.apache.http.conn.ssl.SSLSocketFactory;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
@@ -120,6 +122,21 @@ public class REST {
 		}
 	}
 	
+	public void put(String path, BasicNameValuePair ...params) throws ClientRestException, ClientProtocolException, IOException {
+		String uri = buildUri(path);
+		
+		if (Hoothub.DEBUG) {
+			Log.i(TAG, "PUT " + uri);
+		}
+		
+		HttpPut request = buildPutRequest(uri, params);
+		if (request != null) {
+			executeRequest(request);
+		} else {
+			throw new BadRequest();
+		}
+	}
+	
 	public Map<String, String> getDefaultHeaders() {
 		return mDefaultHeaders;
 	}
@@ -165,6 +182,16 @@ public class REST {
 			exception.printStackTrace();
 		}
 		return (HttpPost) finishRequestBuild(postRequest);
+	}
+	
+	private HttpPut buildPutRequest(String uri, BasicNameValuePair[] params) {
+		HttpPut postRequest = new HttpPut(uri);
+		try {
+			postRequest.setEntity(new UrlEncodedFormEntity(arrayToList(params), HTTP.UTF_8));
+		} catch (UnsupportedEncodingException exception) {
+			exception.printStackTrace();
+		}
+		return (HttpPut) finishRequestBuild(postRequest);
 	}
 	
 	private HttpRequestBase finishRequestBuild(HttpRequestBase request) {

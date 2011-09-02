@@ -113,4 +113,8 @@ public class HoothubApi{
 		mRestClient.post("/messages", new BasicNameValuePair("message[body]", body),
 										new BasicNameValuePair("message[recipient_id]", threadId.toString()));
 	}
+
+	public void updateSelf(String fullName) throws ClientProtocolException, ClientRestException, IOException {
+		mRestClient.put("/user", new BasicNameValuePair("user[full_name]", fullName));
+	}
 }

@@ -4,6 +4,11 @@
   android:orientation="vertical"
   android:layout_width="match_parent"
   android:layout_height="match_parent">
-    <TextView android:text="Profile" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+    <ImageView android:src="@drawable/icon" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="center_horizontal" android:maxHeight="@dimen/avatarMaxSize" android:maxWidth="@dimen/avatarMaxSize" android:id="@+id/avatarImage" android:layout_marginTop="20dp"></ImageView>
+    <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="@string/fullNameLabel"></TextView>
+    <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:inputType="textPersonName" android:id="@+id/fullNameField">
+        <requestFocus></requestFocus>
+    </EditText>
+    <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/saveButton" android:text="@string/saveAction"></Button>
     
 </LinearLayout>
