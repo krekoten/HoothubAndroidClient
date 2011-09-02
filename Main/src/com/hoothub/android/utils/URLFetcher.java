@@ -26,6 +26,9 @@ public class URLFetcher {
 	}
 	
 	public Bitmap fetchImage(String imageUrl) {
+		if (imageUrl == null) {
+			return null;
+		}
 		Bitmap bitmap = bitmapCache.get(imageUrl);
 		if (bitmap == null) {
 			URL url;
